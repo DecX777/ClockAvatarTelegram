@@ -5,7 +5,7 @@ import calendar
 from telethon import TelegramClient, sync
 from telethon.tl.functions.photos import UploadProfilePhotoRequest, DeletePhotosRequest
 
-client = TelegramClient("timeavatar", "3135518", "465ed9250d34ff6666a60948fada90ed")
+client = TelegramClient("timeavatar", "api_id", "api_hash")
 client.start()
 
 def draw():
