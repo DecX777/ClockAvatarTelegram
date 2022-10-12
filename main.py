@@ -27,7 +27,7 @@ def draw():
     draw_text = ImageDraw.Draw(im)
     font = ImageFont.truetype('fonts/font.otf', size=120)
     font2 = ImageFont.truetype('fonts/font.otf', size=40)
-    font3 = ImageFont.truetype('fonts/font.otf', size=100)
+    font3 = ImageFont.truetype('fonts/font.otf', size=80)
     font4 = ImageFont.truetype('fonts/font.otf', size=40)
     color1 = '#c3dfe6'
     color = color1
@@ -53,7 +53,7 @@ def draw():
     text = today
     (width, height) = font3.getsize(text)
     draw_text.text(
-        ((im.width - width) / 2, height+15),
+        ((im.width - width) / 2, height+50),
         text,
         font=font3,
         fill=color)
@@ -65,9 +65,8 @@ def draw():
         text,
         font=font4,
         fill=color)  
-        
+    
     im.save('tmp/avatar.png')
-
 
 
 current_datetime = datetime.now()
