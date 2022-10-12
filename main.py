@@ -4,6 +4,7 @@ import requests
 import calendar
 from telethon import TelegramClient, sync
 from telethon.tl.functions.photos import UploadProfilePhotoRequest, DeletePhotosRequest
+from random import randint as rn
 
 client = TelegramClient("timeavatar", "api_id", "api_hash")
 client.start()
@@ -23,7 +24,7 @@ def draw():
     usd = (str(data['Valute']['USD']['Value'])[:str(data['Valute']['USD']['Value']).find(':')+6])
     eur = (str(data['Valute']['EUR']['Value'])[:str(data['Valute']['EUR']['Value']).find(':')+6])  
     
-    im = Image.new(mode="RGB", size=(530, 490), color=(0, 59, 70))
+    im = Image.new(mode="RGB", size=(530, 490), color=(rn(0,110), rn(0,110), rn(0,110)))
     draw_text = ImageDraw.Draw(im)
     font = ImageFont.truetype('fonts/font.otf', size=120)
     font2 = ImageFont.truetype('fonts/font.otf', size=40)
