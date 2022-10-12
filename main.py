@@ -30,10 +30,9 @@ def draw():
     font2 = ImageFont.truetype('fonts/font.otf', size=40)
     font3 = ImageFont.truetype('fonts/font.otf', size=80)
     font4 = ImageFont.truetype('fonts/font.otf', size=40)
-    color1 = '#c3dfe6'
-    color = color1
+    color = '#c3dfe6'
     draw = ImageDraw.Draw(im) 
-    draw.line((50,245,480,245), fill = color1, width=8)
+    draw.line((50,245,480,245), fill = color, width=8)
 
     text = hour+':'+minutes
     (width, height) = font.getsize(text)
