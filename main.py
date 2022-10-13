@@ -35,7 +35,7 @@ def draw():
     draw.line((50,245,480,245), fill = color, width=8)
 
     text = hour+':'+minutes
-    (width, height) = font.getsize(text)
+    (width, height) = font.getbbox(text)[2:]
     draw_text.text(
         ((im.width - width) / 2, height+150),
         text,
@@ -43,7 +43,7 @@ def draw():
         fill=color)
 
     text = 'USD: '+str(usd)+'    EUR: '+str(eur)
-    (width, height) = font2.getsize(text)
+    (width, height) = font2.getbbox(text)[2:]
     draw_text.text(
         ((im.width - width) / 2, height+160),
         text,
@@ -51,7 +51,7 @@ def draw():
         fill=color)
 
     text = today
-    (width, height) = font3.getsize(text)
+    (width, height) = font3.getbbox(text)[2:]
     draw_text.text(
         ((im.width - width) / 2, height+50),
         text,
@@ -59,7 +59,7 @@ def draw():
         fill=color)
 
     text = datenow
-    (width, height) = font4.getsize(text)
+    (width, height) = font4.getbbox(text)[2:]
     draw_text.text(
         ((im.width - width) / 2, height+330),
         text,
