@@ -66,7 +66,7 @@ def draw():
         font=font4,
         fill=color)  
     
-    im.save('tmp/avatar.png')
+    im.save('/tmp/avatar.png')
 
 
 current_datetime = datetime.now()
@@ -78,6 +78,6 @@ while True:
         timetowork = timetowork2
         draw()
         client(DeletePhotosRequest(client.get_profile_photos('me')))
-        file = client.upload_file(f"tmp/avatar.png")
+        file = client.upload_file(f"/tmp/avatar.png")
         client(UploadProfilePhotoRequest(file))
         
