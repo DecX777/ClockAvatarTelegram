@@ -5,6 +5,7 @@ Change your avatar in Telegram into a real time clock include Dollar and Euro co
 Installation
 ------------
 To install the requirements, enter a console:
+
     pip install -r requirements.txt 
     
 Getting api_id and api_hash
