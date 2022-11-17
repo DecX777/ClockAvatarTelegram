@@ -5,6 +5,7 @@ import calendar
 from telethon import TelegramClient, sync
 from telethon.tl.functions.photos import UploadProfilePhotoRequest, DeletePhotosRequest
 from random import randint as rn
+from time import sleep
 
 client = TelegramClient("timeavatar", "api_id", "api_hash")
 client.start()
@@ -80,4 +81,5 @@ while True:
         client(DeletePhotosRequest(client.get_profile_photos('me')))
         file = client.upload_file(f"/tmp/avatar.png")
         client(UploadProfilePhotoRequest(file))
+        sleep(59)
         
